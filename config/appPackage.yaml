@@ -1,0 +1,31 @@
+# 本yaml存储每一个APP的AppPackage,即在安卓中的包名
+# 使用adb shell dumpsys activity | findstr "mResume"查询出对应的包名(或者问客户端)
+# mResumedActivity: ActivityRecord{2829920 u0 com.innovel.reader/com.dreame.reader.ui.MainActivity t1320 d0}
+# 取出com.innovel.reader部分则为包名
+Dreame:
+  com.dreame.reader
+
+InnovelLite:
+  com.innovel.reader
+
+Innovel:
+  com.innovel.reader
+
+PortReader:
+  com.portreader.reader
+
+Ringdom:
+  com.ringdom.reader
+
+Slash:
+  com.slash.reader
+
+Suenovela:
+  com.suenovela.reader
+
+Yugto:
+  com.yugto.reader
+
+YugtoLite:
+
+

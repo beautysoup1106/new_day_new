@@ -1,0 +1,21 @@
+# demo
+#onePlus7:
+#  desc: onePlus7_appium启动服务端口号_4723
+#  port: 4723
+#  desired_caps:
+#    platformName: "Android"
+#    deviceName: "GM1900"
+#    appPackage: "com.dreame.reader"
+#    noReset: True
+#    platformVersion: "11"
+#    appActivity: "com.dreame.reader.ui.MainActivity"
+#    newCommandTimeout: 120
+#  bootstrap-port: 4726
+
+# 本yaml保存手机devices name
+# 用adb devices -l(结果中Model后的值)查询本机的devices name,然后按照自己添加手机的配置
+vivo1906:
+  "1906"
+
+onePlus7:
+  "GM1900"
