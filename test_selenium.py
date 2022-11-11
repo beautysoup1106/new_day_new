@@ -42,38 +42,34 @@ ActionChains(driver).move_to_element(driver.find_element_by_xpath('/html/body/di
 
 driver.implicitly_wait(5)
 
-driver.find_elements_by_xpath('/html/body/div/div[4]/div[2]/div[3]/div/ul/li[1]/div/div/div/div/div/div/div[2]/div[1]/ul/li[7]/a/i')[0].click()
+driver.find_elements_by_css_selector('.ChapterListDesktop_chapter-list-item__mcfys .dreame-font')[1].click()
 
-# lock=WebDriverWait(driver, 5).until(EC.element_to_be_clickable(By.XPATH, '/html/body/div/div[4]/div[2]/div[3]/div/ul/li[1]/div/div/div/div/div/div/div[2]/div[1]/ul/li[7]/a/i'))
-#
-# lock.click()
 
 
 driver.find_element_by_xpath('/html/body/div/div[4]/div[2]/div[1]/div[3]/button').click()
+#
+#all_buy_button=driver.find_element(By.CSS_SELECTOR, ".dm-button:nth-child(1) > span")
 
-driver.find_element(By.CSS_SELECTOR, ".dm-button:nth-child(1) > span").click()
 
 # all_buy_button=driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/div[3]/div[2]/button')
 #
 #
 # print(all_buy_button)
 
-# try:
-#
-#  driver.implicitly_wait(5)
-#  all_pay_buy=driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/div[3]/div[2]/button')
-#
-#  print(111111111111111111111)
-#  print(all_pay_buy)
-#  all_buy_button=WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located(By.XPATH, '/html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/div[3]/div[2]/button'))
-#
-#  print(all_buy_button)
-#
-#  if all_buy_button:
-#   all_buy_button.click()
-#
-# except Exception as e:
-#  pass
+try:
+
+ driver.implicitly_wait(2)
+
+ all_buy_button=driver.find_element(By.XPATH, "/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[3]/div[2]/button")
+
+ driver.implicitly_wait(3)
+ print(all_buy_button)
+
+ if all_buy_button:
+  all_buy_button.click()
+
+except Exception as e:
+ print(e)
 
 
 driver.switch_to.window(driver.window_handles[2])
@@ -93,7 +89,7 @@ driver.find_element(By.CSS_SELECTOR, "label").click()
 driver.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[4]/div[3]').click()
 
 driver.find_element_by_xpath('/html/body/div/div/section/section/ul/li[1]/div[1]/input').click()
-driver.find_element_by_xpath('/html/body/div/div/section/section/ul/li[1]/div[1]/input').send_key('594568079@qq.com')
+driver.find_element_by_xpath('/html/body/div/div/section/section/ul/li[1]/div[1]/input').send_keys('594568079@qq.com')
 driver.find_element_by_xpath('/html/body/div/div/section/section/ul/li[2]/div[1]/input').click()
 driver.find_element_by_xpath('/html/body/div/div/section/section/ul/li[2]/div[1]/input').send_keys('123456')
 
@@ -102,7 +98,7 @@ WebDriverWait(driver, 5).until(
  EC.element_to_be_clickable((By.XPATH, '/html/body/div/div/section/section/button'))
  ).click()
 
-time.sleep(2)
+time.sleep(10)
 
 
 
@@ -113,3 +109,4 @@ time.sleep(2)
 
 
 driver.quit()
+
